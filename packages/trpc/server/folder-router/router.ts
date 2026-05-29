@@ -1,4 +1,6 @@
 import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
+import { bulkMoveFolders } from '@documenso/lib/server-only/folder/bulk-move-folders';
+import { bulkPinFolders } from '@documenso/lib/server-only/folder/bulk-pin-folders';
 import { createFolder } from '@documenso/lib/server-only/folder/create-folder';
 import { deleteFolder } from '@documenso/lib/server-only/folder/delete-folder';
 import { findFolders } from '@documenso/lib/server-only/folder/find-folders';
@@ -10,6 +12,10 @@ import { updateFolder } from '@documenso/lib/server-only/folder/update-folder';
 import { ZGenericSuccessResponse, ZSuccessResponseSchema } from '../schema';
 import { authenticatedProcedure, router } from '../trpc';
 import {
+  ZBulkMoveFoldersRequestSchema,
+  ZBulkMoveFoldersResponseSchema,
+  ZBulkPinFoldersRequestSchema,
+  ZBulkPinFoldersResponseSchema,
   ZCreateFolderRequestSchema,
   ZCreateFolderResponseSchema,
   ZDeleteFolderRequestSchema,
@@ -174,7 +180,7 @@ export const folderRouter = router({
             folderId: parentId,
             type,
           });
-        } catch (error) {
+        } catch (_error) {
           throw new AppError(AppErrorCode.NOT_FOUND, {
             message: 'Parent folder not found',
           });
@@ -261,5 +267,73 @@ export const folderRouter = router({
       });
 
       return ZGenericSuccessResponse;
+    }),
+
+  /**
+   * @public
+   */
+  bulkMoveFolders: authenticatedProcedure
+    .meta({
+      openapi: {
+        method: 'POST',
+        path: '/folder/bulk-move',
+        summary: 'Bulk move folders',
+        description: 'Moves multiple folders into another folder',
+        tags: ['Folder'],
+      },
+    })
+    .input(ZBulkMoveFoldersRequestSchema)
+    .output(ZBulkMoveFoldersResponseSchema)
+    .mutation(async ({ input, ctx }) => {
+      const { teamId, user } = ctx;
+      const { folderIds, parentId } = input;
+
+      ctx.logger.info({
+        input: {
+          folderIds,
+          parentId,
+        },
+      });
+
+      return await bulkMoveFolders({
+        userId: user.id,
+        teamId,
+        folderIds,
+        parentId,
+      });
+    }),
+
+  /**
+   * @public
+   */
+  bulkPinFolders: authenticatedProcedure
+    .meta({
+      openapi: {
+        method: 'POST',
+        path: '/folder/bulk-pin',
+        summary: 'Bulk pin folders',
+        description: 'Pins or unpins multiple folders',
+        tags: ['Folder'],
+      },
+    })
+    .input(ZBulkPinFoldersRequestSchema)
+    .output(ZBulkPinFoldersResponseSchema)
+    .mutation(async ({ input, ctx }) => {
+      const { teamId, user } = ctx;
+      const { folderIds, pinned } = input;
+
+      ctx.logger.info({
+        input: {
+          folderIds,
+          pinned,
+        },
+      });
+
+      return await bulkPinFolders({
+        userId: user.id,
+        teamId,
+        folderIds,
+        pinned,
+      });
     }),
 });

@@ -67,6 +67,28 @@ export const ZDeleteFolderRequestSchema = z.object({
   folderId: z.string(),
 });
 
+export const ZBulkMoveFoldersRequestSchema = z.object({
+  folderIds: z.array(z.string()),
+  parentId: ZFolderParentIdSchema.optional().nullable(),
+});
+
+export type TBulkMoveFoldersRequestSchema = z.infer<typeof ZBulkMoveFoldersRequestSchema>;
+
+export const ZBulkMoveFoldersResponseSchema = z.object({
+  movedCount: z.number(),
+});
+
+export const ZBulkPinFoldersRequestSchema = z.object({
+  folderIds: z.array(z.string()),
+  pinned: z.boolean(),
+});
+
+export type TBulkPinFoldersRequestSchema = z.infer<typeof ZBulkPinFoldersRequestSchema>;
+
+export const ZBulkPinFoldersResponseSchema = z.object({
+  pinnedCount: z.number(),
+});
+
 export const ZGetFoldersSchema = z.object({
   parentId: z.string().nullable().optional(),
   type: ZFolderTypeSchema.optional(),

@@ -1891,9 +1891,10 @@ msgstr "予期しないエラーが発生しました。"
 #: apps/remix/app/components/forms/signup.tsx
 #: apps/remix/app/components/forms/signup.tsx
 #: apps/remix/app/components/forms/team-update-form.tsx
+#: apps/remix/app/components/general/admin-email-blocklist-section.tsx
+#: apps/remix/app/components/general/admin-site-banner-section.tsx
 #: apps/remix/app/components/general/app-command-menu.tsx
 #: apps/remix/app/components/general/envelope-editor/envelope-editor-settings-dialog.tsx
-#: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
 #: apps/remix/app/routes/_unauthenticated+/o.$orgUrl.signin.tsx
 msgid "An unknown error occurred"
 msgstr "不明なエラーが発生しました"
@@ -2196,7 +2197,7 @@ msgstr "ホームへ戻る"
 msgid "Background"
 msgstr "背景"
 
-#: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
+#: apps/remix/app/components/general/admin-site-banner-section.tsx
 msgid "Background Color"
 msgstr "背景色"
 
@@ -2213,7 +2214,7 @@ msgstr "バックアップコード"
 msgid "Backup codes"
 msgstr "バックアップコード"
 
-#: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
+#: apps/remix/app/components/general/admin-site-banner-section.tsx
 msgid "Banner Updated"
 msgstr "バナーを更新しました"
 
@@ -2242,6 +2243,14 @@ msgstr "請求"
 #: packages/ui/primitives/signature-pad/signature-pad-color-picker.tsx
 msgid "Black"
 msgstr "黒"
+
+#: apps/remix/app/components/general/admin-email-blocklist-section.tsx
+msgid "Block signups from additional email domains on top of the bundled disposable email list. Subdomains are matched automatically (e.g. blocking \"bad.com\" also blocks \"foo.bad.com\")."
+msgstr ""
+
+#: apps/remix/app/components/general/admin-email-blocklist-section.tsx
+msgid "Blocked Domains"
+msgstr ""
 
 #: packages/ui/primitives/signature-pad/signature-pad-color-picker.tsx
 msgid "Blue"
@@ -2725,6 +2734,10 @@ msgstr "閉じる"
 msgid "Collapse sidebar"
 msgstr "サイドバーを折りたたむ"
 
+#: apps/remix/app/components/general/admin-email-blocklist-section.tsx
+msgid "Comma-separated list of email domains to block from signing up."
+msgstr ""
+
 #: apps/remix/app/components/embed/authoring/configure-document-advanced-settings.tsx
 msgid "Communication"
 msgstr "コミュニケーション"
@@ -2922,7 +2935,7 @@ msgstr "営業にお問い合わせ"
 msgid "Contact us"
 msgstr "お問い合わせ"
 
-#: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
+#: apps/remix/app/components/general/admin-site-banner-section.tsx
 msgid "Content"
 msgstr "コンテンツ"
 
@@ -3919,6 +3932,10 @@ msgstr "表示名"
 msgid "Display your name and email in documents"
 msgstr "文書にあなたの名前とメールアドレスを表示する"
 
+#: apps/remix/app/components/forms/signup.tsx
+msgid "Disposable email addresses are not allowed. Please sign up with a permanent email address."
+msgstr ""
+
 #: apps/remix/app/components/general/document/document-edit-form.tsx
 msgid "Distribute Document"
 msgstr "文書を配布"
@@ -4679,6 +4696,14 @@ msgstr "メールはすでに確認済みです"
 msgid "Email already exists"
 msgstr "メールはすでに存在します"
 
+#: apps/remix/app/components/general/admin-email-blocklist-section.tsx
+msgid "Email Blocklist"
+msgstr ""
+
+#: apps/remix/app/components/general/admin-email-blocklist-section.tsx
+msgid "Email Blocklist Updated"
+msgstr ""
+
 #: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
 msgid "Email Confirmed!"
 msgstr "メールアドレスが確認されました！"
@@ -4906,8 +4931,9 @@ msgstr "チーム API トークンを有効にして、別のチームメンバ�
 #: apps/remix/app/components/dialogs/webhook-create-dialog.tsx
 #: apps/remix/app/components/dialogs/webhook-edit-dialog.tsx
 #: apps/remix/app/components/forms/document-preferences-form.tsx
+#: apps/remix/app/components/general/admin-email-blocklist-section.tsx
 #: apps/remix/app/components/general/admin-global-settings-section.tsx
-#: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
+#: apps/remix/app/components/general/admin-site-banner-section.tsx
 #: apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings.webhooks._index.tsx
 #: apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings.webhooks.$id._index.tsx
 #: packages/ui/components/document/reminder-settings-picker.tsx
@@ -9655,7 +9681,7 @@ msgstr "サインアップは現在無効になっているか、お使いのメ
 msgid "Since {0}"
 msgstr "{0} から"
 
-#: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
+#: apps/remix/app/components/general/admin-site-banner-section.tsx
 msgid "Site Banner"
 msgstr "サイトバナー"
 
@@ -10389,7 +10415,7 @@ msgstr "テキスト"
 msgid "Text Align"
 msgstr "テキスト揃え"
 
-#: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
+#: apps/remix/app/components/general/admin-site-banner-section.tsx
 msgid "Text Color"
 msgstr "テキスト色"
 
@@ -10441,7 +10467,7 @@ msgstr "受信者が署名フィールドに署名する際に必要な認証方
 msgid "The authentication methods required for recipients to view the document."
 msgstr "受信者がドキュメントを閲覧する際に必要な認証方法です。"
 
-#: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
+#: apps/remix/app/components/general/admin-site-banner-section.tsx
 msgid "The content to show in the banner, HTML is allowed"
 msgstr "バナーに表示するコンテンツです。HTML が使用できます。"
 
@@ -10532,6 +10558,10 @@ msgstr "ドキュメント名"
 #: apps/remix/app/components/forms/email-preferences-form.tsx
 msgid "The email address which will show up in the \"Reply To\" field in emails"
 msgstr "メールの「返信先」フィールドに表示されるメールアドレスです"
+
+#: apps/remix/app/components/general/admin-email-blocklist-section.tsx
+msgid "The email blocklist has been updated successfully."
+msgstr ""
 
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.email-domains.$id.tsx
 msgid "The email domain you are looking for may have been removed, renamed or may have never existed."
@@ -10729,7 +10759,7 @@ msgstr "受信者「{recipientName}」の文書「{documentName}」に対する�
 msgid "The signing window for {displayName} on document \"{documentName}\" has expired. You can resend the document to extend their deadline or cancel the document."
 msgstr "{displayName} の文書「{documentName}」に対する署名期間が終了しました。期限を延長するには文書を再送信するか、文書をキャンセルできます。"
 
-#: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
+#: apps/remix/app/components/general/admin-site-banner-section.tsx
 msgid "The site banner is a message that is shown at the top of the site. It can be used to display important information to your users."
 msgstr "サイトバナーはサイト上部に表示されるメッセージです。ユーザーに重要なお知らせを表示するために利用できます。"
 
@@ -11670,7 +11700,7 @@ msgstr "無題のグループ"
 msgid "Update"
 msgstr "更新"
 
-#: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
+#: apps/remix/app/components/general/admin-site-banner-section.tsx
 msgid "Update Banner"
 msgstr "バナーを更新"
 
@@ -11678,6 +11708,10 @@ msgstr "バナーを更新"
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.email-domains._index.tsx
 msgid "Update Billing"
 msgstr "請求情報を更新"
+
+#: apps/remix/app/components/general/admin-email-blocklist-section.tsx
+msgid "Update Blocklist"
+msgstr ""
 
 #: apps/remix/app/components/dialogs/claim-update-dialog.tsx
 msgid "Update Claim"
@@ -12481,9 +12515,13 @@ msgstr "サインイン処理中に不明なエラーが発生しました。後
 msgid "We encountered an unknown error while attempting to sign you Up. Please try again later."
 msgstr "サインアップ処理中に不明なエラーが発生しました。後でもう一度お試しください。"
 
-#: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
+#: apps/remix/app/components/general/admin-site-banner-section.tsx
 msgid "We encountered an unknown error while attempting to update the banner. Please try again later."
 msgstr "バナーの更新中に不明なエラーが発生しました。後でもう一度お試しください。"
+
+#: apps/remix/app/components/general/admin-email-blocklist-section.tsx
+msgid "We encountered an unknown error while attempting to update the email blocklist. Please try again later."
+msgstr ""
 
 #: apps/remix/app/components/general/envelope-editor/envelope-editor-settings-dialog.tsx
 msgid "We encountered an unknown error while attempting to update the envelope. Please try again later."
@@ -13584,7 +13622,7 @@ msgstr "アカウントは正常に削除されました。"
 msgid "Your avatar has been updated successfully."
 msgstr "アバターは正常に更新されました。"
 
-#: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
+#: apps/remix/app/components/general/admin-site-banner-section.tsx
 msgid "Your banner has been updated successfully."
 msgstr "バナーは正常に更新されました。"
 
@@ -13921,4 +13959,3 @@ msgstr "認証コード:"
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.sso.tsx
 msgid "your-domain.com another-domain.com"
 msgstr "your-domain.com another-domain.com"
-

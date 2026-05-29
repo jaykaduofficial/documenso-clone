@@ -1891,9 +1891,10 @@ msgstr "예기치 않은 오류가 발생했습니다."
 #: apps/remix/app/components/forms/signup.tsx
 #: apps/remix/app/components/forms/signup.tsx
 #: apps/remix/app/components/forms/team-update-form.tsx
+#: apps/remix/app/components/general/admin-email-blocklist-section.tsx
+#: apps/remix/app/components/general/admin-site-banner-section.tsx
 #: apps/remix/app/components/general/app-command-menu.tsx
 #: apps/remix/app/components/general/envelope-editor/envelope-editor-settings-dialog.tsx
-#: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
 #: apps/remix/app/routes/_unauthenticated+/o.$orgUrl.signin.tsx
 msgid "An unknown error occurred"
 msgstr "알 수 없는 오류가 발생했습니다"
@@ -2196,7 +2197,7 @@ msgstr "홈으로 돌아가기"
 msgid "Background"
 msgstr "배경"
 
-#: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
+#: apps/remix/app/components/general/admin-site-banner-section.tsx
 msgid "Background Color"
 msgstr "배경 색상"
 
@@ -2213,7 +2214,7 @@ msgstr "백업 코드"
 msgid "Backup codes"
 msgstr "백업 코드"
 
-#: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
+#: apps/remix/app/components/general/admin-site-banner-section.tsx
 msgid "Banner Updated"
 msgstr "배너가 업데이트되었습니다"
 
@@ -2242,6 +2243,14 @@ msgstr "결제"
 #: packages/ui/primitives/signature-pad/signature-pad-color-picker.tsx
 msgid "Black"
 msgstr "검정"
+
+#: apps/remix/app/components/general/admin-email-blocklist-section.tsx
+msgid "Block signups from additional email domains on top of the bundled disposable email list. Subdomains are matched automatically (e.g. blocking \"bad.com\" also blocks \"foo.bad.com\")."
+msgstr ""
+
+#: apps/remix/app/components/general/admin-email-blocklist-section.tsx
+msgid "Blocked Domains"
+msgstr ""
 
 #: packages/ui/primitives/signature-pad/signature-pad-color-picker.tsx
 msgid "Blue"
@@ -2725,6 +2734,10 @@ msgstr "닫기"
 msgid "Collapse sidebar"
 msgstr "사이드바 접기"
 
+#: apps/remix/app/components/general/admin-email-blocklist-section.tsx
+msgid "Comma-separated list of email domains to block from signing up."
+msgstr ""
+
 #: apps/remix/app/components/embed/authoring/configure-document-advanced-settings.tsx
 msgid "Communication"
 msgstr "커뮤니케이션"
@@ -2922,7 +2935,7 @@ msgstr "영업팀에 문의"
 msgid "Contact us"
 msgstr "문의하기"
 
-#: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
+#: apps/remix/app/components/general/admin-site-banner-section.tsx
 msgid "Content"
 msgstr "콘텐츠"
 
@@ -3919,6 +3932,10 @@ msgstr "표시 이름"
 msgid "Display your name and email in documents"
 msgstr "문서에 이름과 이메일을 표시합니다"
 
+#: apps/remix/app/components/forms/signup.tsx
+msgid "Disposable email addresses are not allowed. Please sign up with a permanent email address."
+msgstr ""
+
 #: apps/remix/app/components/general/document/document-edit-form.tsx
 msgid "Distribute Document"
 msgstr "문서 배포"
@@ -4679,6 +4696,14 @@ msgstr "이미 확인된 이메일입니다."
 msgid "Email already exists"
 msgstr "이메일이 이미 존재합니다."
 
+#: apps/remix/app/components/general/admin-email-blocklist-section.tsx
+msgid "Email Blocklist"
+msgstr ""
+
+#: apps/remix/app/components/general/admin-email-blocklist-section.tsx
+msgid "Email Blocklist Updated"
+msgstr ""
+
 #: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
 msgid "Email Confirmed!"
 msgstr "이메일이 확인되었습니다!"
@@ -4906,8 +4931,9 @@ msgstr "팀 API 토큰을 활성화하여 문서 소유권을 다른 팀 구성�
 #: apps/remix/app/components/dialogs/webhook-create-dialog.tsx
 #: apps/remix/app/components/dialogs/webhook-edit-dialog.tsx
 #: apps/remix/app/components/forms/document-preferences-form.tsx
+#: apps/remix/app/components/general/admin-email-blocklist-section.tsx
 #: apps/remix/app/components/general/admin-global-settings-section.tsx
-#: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
+#: apps/remix/app/components/general/admin-site-banner-section.tsx
 #: apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings.webhooks._index.tsx
 #: apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings.webhooks.$id._index.tsx
 #: packages/ui/components/document/reminder-settings-picker.tsx
@@ -9655,7 +9681,7 @@ msgstr "회원가입이 현재 비활성화되어 있거나, 사용자의 이메
 msgid "Since {0}"
 msgstr "{0} 이후"
 
-#: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
+#: apps/remix/app/components/general/admin-site-banner-section.tsx
 msgid "Site Banner"
 msgstr "사이트 배너"
 
@@ -10389,7 +10415,7 @@ msgstr "텍스트"
 msgid "Text Align"
 msgstr "텍스트 정렬"
 
-#: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
+#: apps/remix/app/components/general/admin-site-banner-section.tsx
 msgid "Text Color"
 msgstr "텍스트 색상"
 
@@ -10441,7 +10467,7 @@ msgstr "수신자가 서명 필드를 서명할 때 필요한 인증 방식입�
 msgid "The authentication methods required for recipients to view the document."
 msgstr "수신자가 문서를 열람할 때 필요한 인증 방식입니다."
 
-#: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
+#: apps/remix/app/components/general/admin-site-banner-section.tsx
 msgid "The content to show in the banner, HTML is allowed"
 msgstr "배너에 표시할 콘텐츠입니다. HTML 사용 가능"
 
@@ -10532,6 +10558,10 @@ msgstr "문서 이름"
 #: apps/remix/app/components/forms/email-preferences-form.tsx
 msgid "The email address which will show up in the \"Reply To\" field in emails"
 msgstr "이메일의 \"회신 대상\" 필드에 표시될 이메일 주소입니다."
+
+#: apps/remix/app/components/general/admin-email-blocklist-section.tsx
+msgid "The email blocklist has been updated successfully."
+msgstr ""
 
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.email-domains.$id.tsx
 msgid "The email domain you are looking for may have been removed, renamed or may have never existed."
@@ -10729,7 +10759,7 @@ msgstr "문서 \"{documentName}\" 에서 \"{recipientName}\" 님의 서명 가�
 msgid "The signing window for {displayName} on document \"{documentName}\" has expired. You can resend the document to extend their deadline or cancel the document."
 msgstr "문서 \"{documentName}\" 에서 {displayName} 님의 서명 가능 기간이 만료되었습니다. 마감 기한을 연장하기 위해 문서를 다시 보내거나 문서를 취소할 수 있습니다."
 
-#: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
+#: apps/remix/app/components/general/admin-site-banner-section.tsx
 msgid "The site banner is a message that is shown at the top of the site. It can be used to display important information to your users."
 msgstr "사이트 배너는 사이트 상단에 표시되는 메시지입니다. 사용자에게 중요한 정보를 표시하는 데 사용할 수 있습니다."
 
@@ -11670,7 +11700,7 @@ msgstr "제목 없는 그룹"
 msgid "Update"
 msgstr "업데이트"
 
-#: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
+#: apps/remix/app/components/general/admin-site-banner-section.tsx
 msgid "Update Banner"
 msgstr "배너 업데이트"
 
@@ -11678,6 +11708,10 @@ msgstr "배너 업데이트"
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.email-domains._index.tsx
 msgid "Update Billing"
 msgstr "결제 정보 업데이트"
+
+#: apps/remix/app/components/general/admin-email-blocklist-section.tsx
+msgid "Update Blocklist"
+msgstr ""
 
 #: apps/remix/app/components/dialogs/claim-update-dialog.tsx
 msgid "Update Claim"
@@ -12481,9 +12515,13 @@ msgstr "로그인 중 알 수 없는 오류가 발생했습니다. 나중에 다
 msgid "We encountered an unknown error while attempting to sign you Up. Please try again later."
 msgstr "가입 중 알 수 없는 오류가 발생했습니다. 나중에 다시 시도해 주세요."
 
-#: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
+#: apps/remix/app/components/general/admin-site-banner-section.tsx
 msgid "We encountered an unknown error while attempting to update the banner. Please try again later."
 msgstr "배너를 업데이트하는 중 알 수 없는 오류가 발생했습니다. 나중에 다시 시도해 주세요."
+
+#: apps/remix/app/components/general/admin-email-blocklist-section.tsx
+msgid "We encountered an unknown error while attempting to update the email blocklist. Please try again later."
+msgstr ""
 
 #: apps/remix/app/components/general/envelope-editor/envelope-editor-settings-dialog.tsx
 msgid "We encountered an unknown error while attempting to update the envelope. Please try again later."
@@ -13584,7 +13622,7 @@ msgstr "계정이 성공적으로 삭제되었습니다."
 msgid "Your avatar has been updated successfully."
 msgstr "아바타가 성공적으로 업데이트되었습니다."
 
-#: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
+#: apps/remix/app/components/general/admin-site-banner-section.tsx
 msgid "Your banner has been updated successfully."
 msgstr "배너가 성공적으로 업데이트되었습니다."
 
@@ -13921,4 +13959,3 @@ msgstr "인증 코드:"
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.sso.tsx
 msgid "your-domain.com another-domain.com"
 msgstr "your-domain.com another-domain.com"
-

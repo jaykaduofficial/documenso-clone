@@ -1891,9 +1891,10 @@ msgstr "Ein unerwarteter Fehler ist aufgetreten."
 #: apps/remix/app/components/forms/signup.tsx
 #: apps/remix/app/components/forms/signup.tsx
 #: apps/remix/app/components/forms/team-update-form.tsx
+#: apps/remix/app/components/general/admin-email-blocklist-section.tsx
+#: apps/remix/app/components/general/admin-site-banner-section.tsx
 #: apps/remix/app/components/general/app-command-menu.tsx
 #: apps/remix/app/components/general/envelope-editor/envelope-editor-settings-dialog.tsx
-#: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
 #: apps/remix/app/routes/_unauthenticated+/o.$orgUrl.signin.tsx
 msgid "An unknown error occurred"
 msgstr "Es ist ein unbekannter Fehler aufgetreten"
@@ -2196,7 +2197,7 @@ msgstr "Zurück nach Hause"
 msgid "Background"
 msgstr "Hintergrund"
 
-#: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
+#: apps/remix/app/components/general/admin-site-banner-section.tsx
 msgid "Background Color"
 msgstr "Hintergrundfarbe"
 
@@ -2213,7 +2214,7 @@ msgstr "Backup-Code"
 msgid "Backup codes"
 msgstr "Backup-Codes"
 
-#: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
+#: apps/remix/app/components/general/admin-site-banner-section.tsx
 msgid "Banner Updated"
 msgstr "Banner aktualisiert"
 
@@ -2242,6 +2243,14 @@ msgstr "Abrechnung"
 #: packages/ui/primitives/signature-pad/signature-pad-color-picker.tsx
 msgid "Black"
 msgstr "Schwarz"
+
+#: apps/remix/app/components/general/admin-email-blocklist-section.tsx
+msgid "Block signups from additional email domains on top of the bundled disposable email list. Subdomains are matched automatically (e.g. blocking \"bad.com\" also blocks \"foo.bad.com\")."
+msgstr ""
+
+#: apps/remix/app/components/general/admin-email-blocklist-section.tsx
+msgid "Blocked Domains"
+msgstr ""
 
 #: packages/ui/primitives/signature-pad/signature-pad-color-picker.tsx
 msgid "Blue"
@@ -2725,6 +2734,10 @@ msgstr "Schließen"
 msgid "Collapse sidebar"
 msgstr "Seitenleiste einklappen"
 
+#: apps/remix/app/components/general/admin-email-blocklist-section.tsx
+msgid "Comma-separated list of email domains to block from signing up."
+msgstr ""
+
 #: apps/remix/app/components/embed/authoring/configure-document-advanced-settings.tsx
 msgid "Communication"
 msgstr "Kommunikation"
@@ -2922,7 +2935,7 @@ msgstr "Vertrieb hier kontaktieren"
 msgid "Contact us"
 msgstr "Kontaktieren Sie uns"
 
-#: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
+#: apps/remix/app/components/general/admin-site-banner-section.tsx
 msgid "Content"
 msgstr "Inhalt"
 
@@ -3919,6 +3932,10 @@ msgstr "Anzeigename"
 msgid "Display your name and email in documents"
 msgstr "Zeigen Sie Ihren Namen und Ihre E-Mail in Dokumenten an"
 
+#: apps/remix/app/components/forms/signup.tsx
+msgid "Disposable email addresses are not allowed. Please sign up with a permanent email address."
+msgstr ""
+
 #: apps/remix/app/components/general/document/document-edit-form.tsx
 msgid "Distribute Document"
 msgstr "Dokument verteilen"
@@ -4679,6 +4696,14 @@ msgstr "E-Mail bereits bestätigt"
 msgid "Email already exists"
 msgstr "E-Mail existiert bereits"
 
+#: apps/remix/app/components/general/admin-email-blocklist-section.tsx
+msgid "Email Blocklist"
+msgstr ""
+
+#: apps/remix/app/components/general/admin-email-blocklist-section.tsx
+msgid "Email Blocklist Updated"
+msgstr ""
+
 #: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
 msgid "Email Confirmed!"
 msgstr "E-Mail bestätigt!"
@@ -4906,8 +4931,9 @@ msgstr "Team-API-Tokens aktivieren, um das Dokumenteigentum an ein anderes Teamm
 #: apps/remix/app/components/dialogs/webhook-create-dialog.tsx
 #: apps/remix/app/components/dialogs/webhook-edit-dialog.tsx
 #: apps/remix/app/components/forms/document-preferences-form.tsx
+#: apps/remix/app/components/general/admin-email-blocklist-section.tsx
 #: apps/remix/app/components/general/admin-global-settings-section.tsx
-#: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
+#: apps/remix/app/components/general/admin-site-banner-section.tsx
 #: apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings.webhooks._index.tsx
 #: apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings.webhooks.$id._index.tsx
 #: packages/ui/components/document/reminder-settings-picker.tsx
@@ -9655,7 +9681,7 @@ msgstr "Die Registrierung ist derzeit deaktiviert oder für Ihre E-Mail-Domain n
 msgid "Since {0}"
 msgstr "Seit {0}"
 
-#: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
+#: apps/remix/app/components/general/admin-site-banner-section.tsx
 msgid "Site Banner"
 msgstr "Website Banner"
 
@@ -10389,7 +10415,7 @@ msgstr "Text"
 msgid "Text Align"
 msgstr "Textausrichtung"
 
-#: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
+#: apps/remix/app/components/general/admin-site-banner-section.tsx
 msgid "Text Color"
 msgstr "Textfarbe"
 
@@ -10441,7 +10467,7 @@ msgstr "Die Authentifizierungsmethoden, die erforderlich sind, damit Empfänger 
 msgid "The authentication methods required for recipients to view the document."
 msgstr "Die Authentifizierungsmethoden, die erforderlich sind, damit Empfänger das Dokument anzeigen können."
 
-#: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
+#: apps/remix/app/components/general/admin-site-banner-section.tsx
 msgid "The content to show in the banner, HTML is allowed"
 msgstr "Der Inhalt, der im Banne rgezeig wird, HTML ist erlaubt"
 
@@ -10532,6 +10558,10 @@ msgstr "Der Name des Dokuments"
 #: apps/remix/app/components/forms/email-preferences-form.tsx
 msgid "The email address which will show up in the \"Reply To\" field in emails"
 msgstr "Die E-Mail-Adresse, die im \"Antwort an\"-Feld in E-Mails angezeigt wird"
+
+#: apps/remix/app/components/general/admin-email-blocklist-section.tsx
+msgid "The email blocklist has been updated successfully."
+msgstr ""
 
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.email-domains.$id.tsx
 msgid "The email domain you are looking for may have been removed, renamed or may have never existed."
@@ -10729,7 +10759,7 @@ msgstr "Der Signaturzeitraum für \"{recipientName}\" im Dokument \"{documentNam
 msgid "The signing window for {displayName} on document \"{documentName}\" has expired. You can resend the document to extend their deadline or cancel the document."
 msgstr "Der Signaturzeitraum für {displayName} im Dokument \"{documentName}\" ist abgelaufen. Sie können das Dokument erneut senden, um die Frist zu verlängern, oder das Dokument abbrechen."
 
-#: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
+#: apps/remix/app/components/general/admin-site-banner-section.tsx
 msgid "The site banner is a message that is shown at the top of the site. It can be used to display important information to your users."
 msgstr "Das Seitenbanner ist eine Nachricht, die oben auf der Seite angezeigt wird. Es kann verwendet werden, um Ihren Nutzern wichtige Informationen anzuzeigen."
 
@@ -11670,7 +11700,7 @@ msgstr "Unbetitelte Gruppe"
 msgid "Update"
 msgstr "Aktualisieren"
 
-#: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
+#: apps/remix/app/components/general/admin-site-banner-section.tsx
 msgid "Update Banner"
 msgstr "Banner aktualisieren"
 
@@ -11678,6 +11708,10 @@ msgstr "Banner aktualisieren"
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.email-domains._index.tsx
 msgid "Update Billing"
 msgstr "Rechnungsdaten aktualisieren"
+
+#: apps/remix/app/components/general/admin-email-blocklist-section.tsx
+msgid "Update Blocklist"
+msgstr ""
 
 #: apps/remix/app/components/dialogs/claim-update-dialog.tsx
 msgid "Update Claim"
@@ -12481,9 +12515,13 @@ msgstr "Wir sind auf einen unbekannten Fehler gestoßen, während wir versucht h
 msgid "We encountered an unknown error while attempting to sign you Up. Please try again later."
 msgstr "Wir sind auf einen unbekannten Fehler gestoßen, während wir versucht haben, Sie anzumelden. Bitte versuchen Sie es später erneut."
 
-#: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
+#: apps/remix/app/components/general/admin-site-banner-section.tsx
 msgid "We encountered an unknown error while attempting to update the banner. Please try again later."
 msgstr "Wir sind auf einen unbekannten Fehler gestoßen, während wir versucht haben, das Banner zu aktualisieren. Bitte versuchen Sie es später erneut."
+
+#: apps/remix/app/components/general/admin-email-blocklist-section.tsx
+msgid "We encountered an unknown error while attempting to update the email blocklist. Please try again later."
+msgstr ""
 
 #: apps/remix/app/components/general/envelope-editor/envelope-editor-settings-dialog.tsx
 msgid "We encountered an unknown error while attempting to update the envelope. Please try again later."
@@ -13584,7 +13622,7 @@ msgstr "Ihr Konto wurde erfolgreich gelöscht."
 msgid "Your avatar has been updated successfully."
 msgstr "Ihr Avatar wurde erfolgreich aktualisiert."
 
-#: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
+#: apps/remix/app/components/general/admin-site-banner-section.tsx
 msgid "Your banner has been updated successfully."
 msgstr "Ihr Banner wurde erfolgreich aktualisiert."
 
@@ -13921,4 +13959,3 @@ msgstr "Ihr Verifizierungscode:"
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.sso.tsx
 msgid "your-domain.com another-domain.com"
 msgstr "your-domain.com another-domain.com"
-
